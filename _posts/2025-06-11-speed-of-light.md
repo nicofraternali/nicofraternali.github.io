@@ -9,7 +9,7 @@ Some days ago I stumbled upon this on X
 
 > light really is too slow. when you contemplate the vastness of the universe you realize that the speed of light is essentially a prison.
 
-and it is not wrong at all, light travels through space approximately at 300000$\frac{km}{s}$, that seems fast as fuck for our scale, and it is.
+and it is not wrong at all, light travels through space approximately at 300000$$\frac{km}{s}$$, that seems fast as fuck for our scale, and it is.
 
 The distance from where I am currently sitting writing this to it's antipode is 20024.3 $km$ so
 
@@ -27,7 +27,7 @@ What's cool about the universe is how things are mind-blowing and thought provok
 
 ![earth moon distance to scale](/assets/images/earth-moon.png)
 
-The average distance between the Earth and the Moon is 384,400 $km$, light takes ~1.28 seconds to do this small trip, but let's go a little bit further
+The average distance between the Earth and the Moon is 384,400 $$km$$, light takes ~1.28 seconds to do this small trip, but let's go a little bit further
 
 ![earth mars distance to scale](/assets/images/earth-mars.png)
 
