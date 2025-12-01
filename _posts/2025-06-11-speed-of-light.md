@@ -12,6 +12,7 @@ Some days ago I stumbled upon this on X
 and it is not wrong at all, light travels through space approximately at 300000$\frac{km}{s}$, that seems fast as fuck for our scale, and it is.
 
 The distance from where I am currently sitting writing this to it's antipode is 20024.3 $km$ so
+
 $$
 \begin{align}
 time &= \frac{distance}{speed} \\
@@ -19,12 +20,17 @@ time &= \frac{distance}{speed} \\
 &= 0.0667\hspace{1mm}s
 \end{align}
 $$
+
 for comparison, the blink of an eye lasts between 0.1 and 0.4 seconds, the light literally circumnavigate the globe in the blink of an eye.
 
 What's cool about the universe is how things are mind-blowing and thought provoking wherever you look. Start by zooming out from Earth, quickly you'll realize how ant-like we are to the vastness of space
-![[earth-moon.png|]]
+
+![earth moon distance to scale](/assets/images/earth-moon.png)
+
 The average distance between the Earth and the Moon is 384,400 $km$, light takes ~1.28 seconds to do this small trip, but let's go a little bit further
-![[earth-mars.png|]]
+
+![earth mars distance to scale](/assets/images/earth-mars.png)
+
 Now we are talking, a whopping 12.5 minutes for light to cover the distance. 
 
 I remember February 18, 2021 watching [Perseverance's landing](https://www.youtube.com/watch?v=4czjS9h4Fpg&ab_channel=NASA) and listening the telecommunications team being worried about the delay they had with the rover, it took me a few seconds to understand why that was the case. 
@@ -41,6 +47,6 @@ But for them to do the unthinkable we have to keep doing our part, expand our kn
 
 Ad Astra per Aspera!
 
-![[perseverance-selfie.gif|]]
+![earth mars distance to scale](/assets/images/perseverance-selfie.gif)
 
 ---
