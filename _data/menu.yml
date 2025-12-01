@@ -19,5 +19,5 @@ entries:
   - title: about
     url: /about/
 
-  - title: archive
-    url: /archive/
+#  - title: archive
+#    url: /archive/ 
