@@ -3,4 +3,4 @@ layout: page
 title: Archive
 permalink: /archive/
 ---
-{% include archive.html %}
+{% include post_list.html %}
