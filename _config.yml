@@ -1,42 +1,53 @@
-title: no style, please! # name of the site
-author: Nicolás Fraternali # name of site's author
-email: # email of site's author
-url: nicofraternali.github.io # root address of the site
-baseurl: "" # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
-description: > # description of the site (multiple lines allowed)
-  ...
+# Site
+title: Nicolás Fraternali
+author: Nicolás Fraternali
+email: # optional
+lang: en
+description: >
+  Notes on aerospace, engineering, math and the things I build along the way.
+url: "https://nicofraternali.github.io"
+baseurl: ""
+permalink: /:title/
+timezone: America/Argentina/Buenos_Aires
 
-permalink: /:slug.html
-
-favicon: "logo.png" # name+extension of favicon (which must be put on the root folder)
-# goat_counter: "yoursitename" # put your GoatCounter name if you want to use GoatCounter analytics
-
-remote_theme: riggraz/no-style-please
-
+# Theme (temporary until the custom design lands)
+remote_theme: riggraz/no-style-please@2f8dba2c23633b21e45dce0fe2e34ec2d79bb1ca
 theme_config:
-  appearance: "dark" # can be "light", "dark" or "auto"
-  back_home_text: ".." # customize text for homepage link in post layout
-  date_format: "%Y-%m-%d" # customize how date is formatted
-  show_description: false # show blog description in home page
-  lowercase_titles: true # show titles in lowercase in lists
-
-sass:
-  style: compressed
+  appearance: "dark"
+  back_home_text: ".."
+  date_format: "%Y-%m-%d"
+  show_description: false
+  lowercase_titles: true
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
   - jektex
 
+# Math: rendered at build time by jektex (KaTeX), no client-side JS.
+# Use $$...$$ inline and $$...$$ on its own paragraph for display math.
 jektex:
   cache_dir: ".jektex-cache"
   ignore: ["*.xml"]
   silent: false
   macros:
-    - ["\\Q", "\\mathbb{Q}"]
-    - ["\\C", "\\mathbb{C}"]
+    - ['\Q', '\mathbb{Q}']
+    - ['\C', '\mathbb{C}']
 
 markdown: kramdown
 kramdown:
   input: GFM
-  math_engine: mathjax
+  math_engine: mathjax  # kramdown emits \( \) and \[ \], jektex renders them
+
+sass:
+  style: compressed
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .jektex-cache
+  - .github

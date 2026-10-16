@@ -1,0 +1,17 @@
+---
+---
+
+@import "no-style-please";
+
+// Keep intrinsic aspect ratio when width/height attributes are set.
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+// The theme fakes dark mode by inverting the whole page and re-inverting
+// images; videos need the same treatment.
+body[a="dark"] video {
+  filter: invert(1);
+}

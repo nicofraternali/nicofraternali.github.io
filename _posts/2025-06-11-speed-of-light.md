@@ -1,35 +1,36 @@
 ---
 layout: post
 title: "speed of light"
-date: 2025-06-11  # Or the actual date
-permalink: /speed-of-light/  # Optional: Custom URL slug
+date: 2025-06-11
+permalink: /speed-of-light/
+description: "Light circles the Earth in the blink of an eye, yet would take 124 years to reach K2-18b."
 ---
 
 Some days ago I stumbled upon this on X
 
 > light really is too slow. when you contemplate the vastness of the universe you realize that the speed of light is essentially a prison.
 
-and it is not wrong at all, light travels through space approximately at 300000$$\frac{km}{s}$$, that seems fast as fuck for our scale, and it is.
+and it is not wrong at all, light travels through space approximately at $$300\,000\ \mathrm{km/s}$$, that seems fast as fuck for our scale, and it is.
 
-The distance from where I am currently sitting writing this to it's antipode is 20024.3 $km$ so
+The distance from where I am currently sitting writing this to it's antipode is $$20\,024.3\ \mathrm{km}$$, so
 
 $$
-\begin{align}
-time &= \frac{distance}{speed} \\
-&= \frac{20024.3\hspace{1mm}km}{300000\frac{km}{s}} \\
-&= 0.0667\hspace{1mm}s
-\end{align}
+\begin{aligned}
+t &= \frac{d}{c} \\
+  &= \frac{20\,024.3\ \mathrm{km}}{300\,000\ \mathrm{km/s}} \\
+  &= 0.0667\ \mathrm{s}
+\end{aligned}
 $$
 
 for comparison, the blink of an eye lasts between 0.1 and 0.4 seconds, the light literally circumnavigate the globe in the blink of an eye.
 
 What's cool about the universe is how things are mind-blowing and thought provoking wherever you look. Start by zooming out from Earth, quickly you'll realize how ant-like we are to the vastness of space
 
-![earth moon distance to scale](/assets/images/earth-moon.png)
+![Earth and Moon drawn to scale with the distance between them](/assets/images/earth-moon.png){: width="2500" height="1250" loading="lazy"}
 
-The average distance between the Earth and the Moon is 384,400 $$km$$, light takes ~1.28 seconds to do this small trip, but let's go a little bit further
+The average distance between the Earth and the Moon is $$384\,400\ \mathrm{km}$$, light takes ~1.28 seconds to do this small trip, but let's go a little bit further
 
-![earth mars distance to scale](/assets/images/earth-mars.png)
+![Earth and Mars drawn to scale with the distance between them](/assets/images/earth-mars.png){: width="2500" height="1250" loading="lazy"}
 
 Now we are talking, a whopping 12.5 minutes for light to cover the distance. 
 
@@ -47,6 +48,6 @@ But for them to do the unthinkable we have to keep doing our part, expand our kn
 
 Ad Astra per Aspera!
 
-![earth mars distance to scale](/assets/images/perseverance-selfie.gif)
+<video src="/assets/images/perseverance-selfie.mp4" poster="/assets/images/perseverance-selfie-poster.jpg" width="960" height="540" autoplay loop muted playsinline aria-label="Perseverance rover selfie on Mars"></video>
 
 ---

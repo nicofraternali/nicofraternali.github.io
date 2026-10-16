@@ -1,6 +1,5 @@
 ---
-layout: page
-title: Archive
+layout: archive
+title: archive
 permalink: /archive/
 ---
-{% include post_list.html %}
