@@ -1,0 +1,56 @@
+---
+layout: default
+---
+{%- assign project = site.data.coalescence | where: 'id', page.project | first -%}
+{%- assign siblings = site.coalescence | where: 'project', page.project | sort: 'date' | reverse -%}
+<article class="piece">
+  <p class="meta"><a href="{{ '/coalescence/' | relative_url }}">coalescence</a> / {{ project.title | default: page.project }}</p>
+  <h1>{{ page.title | downcase }}</h1>
+
+  <figure class="piece-image">
+    <a href="{{ page.image | relative_url }}">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" width="{{ page.width }}" height="{{ page.height }}" decoding="async" />
+    </a>
+  </figure>
+
+  {{ content }}
+
+  <dl class="specs">
+    <dt>project</dt><dd>{{ page.project }}</dd>
+    {%- if page.seed %}<dt>seed</dt><dd>{{ page.seed }}</dd>{% else %}<dt>puzzle</dt><dd>{{ page.key }}</dd>{% endif %}
+    {%- if page.theme %}<dt>palette</dt><dd>{{ page.theme }}</dd>{% endif %}
+    <dt>rendered</dt><dd>{{ page.date | date: '%Y-%m-%d' }}</dd>
+    <dt>commit</dt><dd><a href="https://github.com/nicofraternali/coalescence/tree/{{ page.commit }}">{{ page.commit }}</a>{% if page.dirty %} <span class="muted">+ local changes</span>{% endif %}</dd>
+  </dl>
+
+  <p class="meta">reproduce</p>
+  <pre><code>git checkout {{ page.commit }}
+uv sync
+{{ page.reproduce }}</code></pre>
+  {%- if page.dirty %}
+  <p class="meta">Rendered with uncommitted changes on top of that commit, so the result may differ slightly.</p>
+  {%- endif %}
+
+  {%- if page.params.size > 0 %}
+  <details class="params">
+    <summary>parameters</summary>
+    <dl class="specs">
+      {%- for p in page.params %}
+      <dt>{{ p[0] }}</dt><dd>{% if p[1] == nil %}—{% else %}{{ p[1] }}{% endif %}</dd>
+      {%- endfor %}
+    </dl>
+  </details>
+  {%- endif %}
+
+  <nav class="piece-nav" aria-label="More from {{ project.title | default: page.project }}">
+    {%- for s in siblings %}
+      {%- if s.url == page.url %}
+        {%- assign i = forloop.index0 %}
+      {%- endif %}
+    {%- endfor %}
+    {%- assign prev_i = i | minus: 1 %}
+    {%- assign next_i = i | plus: 1 %}
+    <span>{% if prev_i >= 0 %}{% assign s = siblings[prev_i] %}<a href="{{ s.url | relative_url }}">← {{ s.key }}</a>{% endif %}</span>
+    <span>{% if next_i < siblings.size %}{% assign s = siblings[next_i] %}<a href="{{ s.url | relative_url }}">{{ s.key }} →</a>{% endif %}</span>
+  </nav>
+</article>

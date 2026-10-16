@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<h1>{{ page.title | downcase }}</h1>
+<div class="intro">
+  {{ content }}
+</div>
+
+{%- for project in site.data.coalescence %}
+{%- assign pieces = site.coalescence | where: 'project', project.id | sort: 'date' | reverse %}
+{%- if pieces.size > 0 %}
+<section class="gallery-project">
+  <h2 class="section-label">{{ project.title }}</h2>
+  <p class="meta">{{ project.about }}</p>
+  <ul class="gallery">
+    {%- for piece in pieces %}
+    <li>
+      <a href="{{ piece.url | relative_url }}">
+        <img src="{{ piece.thumb | relative_url }}" alt="{{ piece.title }}" width="720" height="720" loading="lazy" decoding="async" />
+        <span>{{ piece.key }}{% if piece.theme %} · {{ piece.theme }}{% endif %}</span>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+{%- endfor %}

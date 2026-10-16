@@ -1,5 +1,7 @@
 # Top navigation. Sections are added here as they come online.
 - title: log
   url: /archive/
+- title: coalescence
+  url: /coalescence/
 - title: about
   url: /about/

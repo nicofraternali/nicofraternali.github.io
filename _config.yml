@@ -10,6 +10,19 @@ baseurl: ""
 permalink: /:title/
 timezone: America/Argentina/Buenos_Aires
 
+# Generative art pieces, published from the coalescence repo by
+# scripts/build_gallery.py there. One page per piece.
+collections:
+  coalescence:
+    output: true
+    permalink: /coalescence/:name/
+
+defaults:
+  - scope:
+      type: coalescence
+    values:
+      layout: piece
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

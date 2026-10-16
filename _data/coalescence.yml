@@ -1,0 +1,13 @@
+# Order and one-line description of each coalescence project in the gallery.
+- id: pendulum
+  title: pendulum
+  about: A double pendulum in real units, integrated with RK4. Its chaotic trace becomes walls, and the enclosed regions are colored by graph coloring.
+- id: killer_sudoku
+  title: killer sudoku
+  about: A solver that records every deduction. Each solved cell is a node, sized by how many cells came to depend on it.
+- id: tiling_squares
+  title: tiling squares
+  about: A Truchet-style tiling of diagonal lines, with diamonds where a 2×2 neighborhood matches the "1001" pattern.
+- id: tiling_holes
+  title: tiling holes
+  about: The same tiling with figure and ground inverted, carved as shaded V-cut trenches under a wire mesh.

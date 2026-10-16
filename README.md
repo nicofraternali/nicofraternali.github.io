@@ -29,3 +29,8 @@ Custom theme, no external theme or scripts. One palette ("ámbar fósforo", see
 The footer draws real satellites (listed in `_data/satellites.yml`) propagated live
 with SGP4. Their TLEs come from CelesTrak: `ruby scripts/fetch_tle.rb` refreshes
 `_data/tle.json`, and the deploy workflow runs it on every build and twice a day.
+
+The coalescence gallery (`/coalescence/`) is generated from the
+[coalescence](https://github.com/nicofraternali/coalescence) repo: its
+`scripts/build_gallery.py` writes `_coalescence/*.md` and `assets/coalescence/*.webp`.
+Project order and descriptions live in `_data/coalescence.yml`.

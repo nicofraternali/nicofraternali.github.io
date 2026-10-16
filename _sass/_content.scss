@@ -114,3 +114,106 @@ table {
     color: var(--heading);
   }
 }
+
+.muted {
+  color: var(--muted);
+}
+
+// Coalescence gallery: a square grid per project.
+.gallery-project .meta {
+  max-width: 60ch;
+}
+
+.gallery {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 20px 16px;
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: var(--muted);
+    font-size: var(--small);
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    margin-bottom: 6px;
+    outline: 1px solid var(--rule);
+    transition: outline-color 120ms ease;
+  }
+
+  a:hover {
+    color: var(--heading);
+  }
+
+  a:hover img {
+    outline-color: var(--accent);
+  }
+}
+
+.piece {
+  .piece-image {
+    margin: 1.4em 0 2em;
+  }
+
+  .piece-image a {
+    display: block;
+  }
+
+  .meta a {
+    color: var(--muted);
+  }
+}
+
+// Key/value lists: piece specs and parameters.
+.specs {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 2px 24px;
+  margin: 0 0 1.6em;
+  font-size: 0.93em;
+
+  dt {
+    color: var(--muted);
+  }
+
+  dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+}
+
+details.params {
+  margin: 1.6em 0;
+
+  summary {
+    cursor: pointer;
+    color: var(--muted);
+    font-size: var(--small);
+    margin-bottom: 10px;
+  }
+
+  summary:hover {
+    color: var(--heading);
+  }
+}
+
+.piece-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3em;
+  font-size: var(--small);
+}
+
+@media (max-width: 520px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 12px;
+  }
+}
