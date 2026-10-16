@@ -26,11 +26,11 @@ for comparison, the blink of an eye lasts between 0.1 and 0.4 seconds, the light
 
 What's cool about the universe is how things are mind-blowing and thought provoking wherever you look. Start by zooming out from Earth, quickly you'll realize how ant-like we are to the vastness of space
 
-![Earth and Moon drawn to scale with the distance between them](/assets/images/earth-moon.png){: width="2500" height="1250" loading="lazy"}
+{% include figure.html src="/assets/images/earth-moon.png" alt="Earth and Moon drawn to scale with the distance between them" caption="Earth and Moon to scale, 384 400 km apart." width="2500" height="1250" %}
 
 The average distance between the Earth and the Moon is $$384\,400\ \mathrm{km}$$, light takes ~1.28 seconds to do this small trip, but let's go a little bit further
 
-![Earth and Mars drawn to scale with the distance between them](/assets/images/earth-mars.png){: width="2500" height="1250" loading="lazy"}
+{% include figure.html src="/assets/images/earth-mars.png" alt="Earth and Mars drawn to scale with the distance between them" caption="Earth and Mars to scale, at their average distance." width="2500" height="1250" %}
 
 Now we are talking, a whopping 12.5 minutes for light to cover the distance. 
 
@@ -48,6 +48,9 @@ But for them to do the unthinkable we have to keep doing our part, expand our kn
 
 Ad Astra per Aspera!
 
-<video src="/assets/images/perseverance-selfie.mp4" poster="/assets/images/perseverance-selfie-poster.jpg" width="960" height="540" autoplay loop muted playsinline aria-label="Perseverance rover selfie on Mars"></video>
+<figure>
+  <video src="/assets/images/perseverance-selfie.mp4" poster="/assets/images/perseverance-selfie-poster.jpg" width="960" height="540" autoplay loop muted playsinline aria-label="Perseverance rover selfie on Mars"></video>
+  <figcaption>Perseverance on Mars, 12.5 light-minutes away.</figcaption>
+</figure>
 
 ---

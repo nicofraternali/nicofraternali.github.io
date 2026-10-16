@@ -4,6 +4,9 @@ on:
   push:
   pull_request:
   workflow_dispatch:
+  # Rebuild twice a day so the footer satellites use fresh TLEs.
+  schedule:
+    - cron: "17 5,17 * * *"
 
 permissions:
   contents: read
@@ -26,6 +29,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - name: Refresh satellite TLEs
+        run: ruby scripts/fetch_tle.rb
       - name: Build
         run: bundle exec jekyll build
         env:
@@ -33,7 +38,7 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
 
   deploy:
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:

@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<section class="intro">
+  {{ content }}
+</section>
+
+<section>
+  <h2 class="section-label">log</h2>
+  {%- include post_list.html limit=8 %}
+  {%- if site.posts.size > 8 %}
+  <p><a href="{{ '/archive/' | relative_url }}">all posts</a></p>
+  {%- endif %}
+</section>

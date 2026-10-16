@@ -1,0 +1,9 @@
+<footer class="site-footer">
+  <svg class="orbits" data-seed="{{ page.url }}" aria-hidden="true"></svg>
+  <div class="wrap footer-line">
+    <span>© {{ site.time | date: '%Y' }} {{ site.author | downcase }}</span>
+    <span class="orbit-elements" aria-live="off"></span>
+    <a href="{{ '/feed.xml' | relative_url }}">rss</a>
+  </div>
+  <script type="application/json" id="tle-data">{{ site.data.tle.satellites | jsonify }}</script>
+</footer>

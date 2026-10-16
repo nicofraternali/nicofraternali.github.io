@@ -1,0 +1,147 @@
+// Keep the footer at the bottom on short pages.
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body > .wrap {
+  flex: 1;
+  width: 100%;
+}
+
+.wrap {
+  max-width: calc(var(--measure) + 2 * var(--gutter));
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px 24px;
+  padding: 40px 0 56px;
+  font-size: var(--small);
+
+  .site-name {
+    color: var(--heading);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  nav {
+    display: flex;
+    gap: 18px;
+  }
+
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+
+    &:hover,
+    &[aria-current="page"] {
+      color: var(--heading);
+    }
+  }
+}
+
+.section-label {
+  color: var(--muted);
+  font-size: var(--small);
+  font-weight: 400;
+  margin: 3em 0 0.8em;
+
+  &::before {
+    content: "— ";
+  }
+}
+
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: grid;
+    grid-template-columns: 11ch 1fr;
+    gap: 12px;
+    padding: 2px 0;
+  }
+
+  time {
+    color: var(--muted);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+  }
+}
+
+.site-footer {
+  position: relative;
+  margin-top: 96px;
+  border-top: 1px solid var(--rule);
+  height: 230px;
+  overflow: hidden;
+
+  .orbits {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 16px;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    color: var(--muted);
+
+    // Font size on the children: .wrap's width is measured in ch.
+    > * {
+      font-size: var(--small);
+    }
+  }
+
+  .footer-line a {
+    color: var(--muted);
+  }
+}
+
+@media (max-width: 520px) {
+  :root {
+    --size: 14px;
+    --gutter: 16px;
+  }
+
+  .site-header {
+    padding: 28px 0 40px;
+  }
+
+  .post-list li {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 6px 0;
+  }
+
+  .site-footer .footer-line {
+    flex-wrap: wrap;
+    gap: 2px 16px;
+  }
+
+  .orbit-elements {
+    order: -1;
+    width: 100%;
+  }
+}

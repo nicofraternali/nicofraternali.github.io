@@ -1,0 +1,9 @@
+{%- assign posts = include.posts | default: site.posts -%}
+<ul class="post-list">
+  {%- for post in posts limit: include.limit %}
+  <li>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y-%m-%d' }}</time>
+    <a href="{{ post.url | relative_url }}">{{ post.title | downcase }}</a>
+  </li>
+  {%- endfor %}
+</ul>

@@ -1,0 +1,10 @@
+{%- comment -%}
+  Numbered figure. Usage:
+  {% include figure.html src="/assets/images/x.png" alt="..." caption="..." width="2500" height="1250" %}
+{%- endcomment -%}
+<figure>
+  <img src="{{ include.src | relative_url }}" alt="{{ include.alt }}"{% if include.width %} width="{{ include.width }}"{% endif %}{% if include.height %} height="{{ include.height }}"{% endif %} loading="lazy" decoding="async" />
+  {%- if include.caption %}
+  <figcaption>{{ include.caption | markdownify | remove: '<p>' | remove: '</p>' | strip }}</figcaption>
+  {%- endif %}
+</figure>

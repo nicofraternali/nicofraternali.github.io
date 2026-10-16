@@ -1,0 +1,13 @@
+---
+layout: default
+---
+{%- assign words = content | strip_html | number_of_words -%}
+{%- assign minutes = words | divided_by: 200 | at_least: 1 -%}
+<article class="post">
+  <p class="meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y-%m-%d' }}</time>
+    · {{ minutes }} min
+  </p>
+  <h1>{{ page.title | downcase }}</h1>
+  {{ content }}
+</article>

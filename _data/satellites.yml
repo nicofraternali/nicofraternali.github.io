@@ -1,0 +1,14 @@
+# Satellites drawn in the footer. `catnr` is the NORAD catalog number.
+# Their TLEs live in _data/tle.json, refreshed by scripts/fetch_tle.rb.
+- name: ISS
+  catnr: 25544
+- name: Hubble
+  catnr: 20580
+- name: Tiangong
+  catnr: 48274
+- name: Landsat 9
+  catnr: 49260
+- name: GPS IIF-8
+  catnr: 40294
+- name: GOES-16
+  catnr: 41866

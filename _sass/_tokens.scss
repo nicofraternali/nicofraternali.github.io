@@ -1,0 +1,17 @@
+// Palette "ámbar fósforo": the one and only palette of the site.
+:root {
+  --bg: #0e0e0c;
+  --rule: #23221f;
+  --surface: #151513;
+  --muted: #7e7a71;
+  --text: #d9d5cc;
+  --heading: #ece8df;
+  --accent: #f0a63a;
+
+  --font: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --size: 15px;
+  --small: 12px;
+  --leading: 1.75;
+  --measure: 66ch;
+  --gutter: 20px;
+}

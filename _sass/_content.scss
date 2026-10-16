@@ -1,0 +1,116 @@
+.meta {
+  color: var(--muted);
+  font-size: var(--small);
+  margin: 0;
+}
+
+.post,
+.page {
+  counter-reset: fig eq;
+
+  p,
+  ul,
+  ol {
+    margin: 0 0 1.2em;
+  }
+}
+
+blockquote {
+  margin: 1.6em 0;
+  padding: 0 0 0 18px;
+  border-left: 2px solid var(--accent);
+  color: var(--heading);
+  font-style: italic;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+code {
+  font-family: var(--font);
+  font-size: 0.92em;
+  background: var(--surface);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+pre {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  padding: 14px 16px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.6;
+
+  code {
+    background: none;
+    padding: 0;
+  }
+}
+
+// Numbered figures: "fig. 01".
+figure {
+  margin: 2em 0;
+
+  img,
+  video {
+    margin: 0 auto;
+  }
+}
+
+figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: var(--small);
+
+  &::before {
+    counter-increment: fig;
+    content: "fig. " counter(fig, decimal-leading-zero) " — ";
+    color: var(--accent);
+  }
+}
+
+// Numbered display equations: "(1)".
+.katex {
+  font-size: 1.12em;
+}
+
+.katex-display {
+  position: relative;
+  counter-increment: eq;
+  margin: 1.6em 0;
+  padding: 0 4ch;
+  overflow-x: auto;
+  overflow-y: hidden;
+  color: var(--heading);
+
+  &::after {
+    content: "(" counter(eq) ")";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent);
+    font-family: var(--font);
+    font-size: var(--small);
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.93em;
+  margin: 1.6em 0;
+
+  th,
+  td {
+    text-align: left;
+    padding: 6px 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  th {
+    color: var(--heading);
+  }
+}

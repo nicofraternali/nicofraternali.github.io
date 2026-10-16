@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<h1>{{ page.title | downcase }}</h1>
+{%- assign years = site.posts | group_by_exp: 'post', "post.date | date: '%Y'" %}
+{%- for year in years %}
+<h2 class="section-label">{{ year.name }}</h2>
+{%- include post_list.html posts=year.items %}
+{%- endfor %}

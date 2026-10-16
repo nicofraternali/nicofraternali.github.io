@@ -10,17 +10,7 @@ baseurl: ""
 permalink: /:title/
 timezone: America/Argentina/Buenos_Aires
 
-# Theme (temporary until the custom design lands)
-remote_theme: riggraz/no-style-please@2f8dba2c23633b21e45dce0fe2e34ec2d79bb1ca
-theme_config:
-  appearance: "dark"
-  back_home_text: ".."
-  date_format: "%Y-%m-%d"
-  show_description: false
-  lowercase_titles: true
-
 plugins:
-  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -51,3 +41,4 @@ exclude:
   - vendor
   - .jektex-cache
   - .github
+  - scripts
