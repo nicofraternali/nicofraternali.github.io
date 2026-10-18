@@ -5,7 +5,7 @@ email: # optional
 lang: en
 description: >
   Notes on aerospace, engineering, math and the things I build along the way.
-url: "https://nicofraternali.github.io"
+url: "https://nicofraternali.com"
 baseurl: ""
 permalink: /:title/
 timezone: America/Argentina/Buenos_Aires
